@@ -1,11 +1,9 @@
 <% @publications.each do |publication| %>
   <% present publication, PublicationPresenter do |p| %>
-    <%= p.title %>
-    <%= p.excerpt %>
-
-    Published at: <%= p.published %>
-    Published as: <%= p.type %> 
-    Authored by: <%= p.author %>
-
+    <div class="publication">
+      <h2><%= p.link_to_page %></h2>
+      <p><em>Published on <%= p.published %>  by <%= p.author %> - <%= p.type %></em></p>
+      <p><%= p.excerpt %></p>
+    </div>
   <% end %>
 <% end %>
