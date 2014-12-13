@@ -1,4 +1,5 @@
 class Author < ActiveRecord::Base
-  validates :name, :presence => true
-  validates :biography, :presence => true
+  has_many :short_stories, :inverse_of => :author
+
+  validates_presence_of :name, :biography
 end
