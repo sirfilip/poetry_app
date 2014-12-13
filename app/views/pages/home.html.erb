@@ -1,0 +1,10 @@
+<% @publications.each do |publication| %>
+
+  <%= publication['title'] %>
+  <%= publication['excerpt'] %>
+
+  Published at: <%= publication['published_at'] %>
+  Published as: <%= publication['type'] %> 
+  Authored by: <%= publication['author_name'] %>
+
+<% end %>
