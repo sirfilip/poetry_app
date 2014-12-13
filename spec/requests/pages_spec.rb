@@ -1,6 +1,24 @@
 require 'rails_helper'
 
 describe "Pages" do 
+
+  describe "MainMenu" do
+    before do 
+      visit root_path
+    end
+
+    it "should have a link to the home page" do 
+      expect(page).to have_xpath("//a[@href='#{root_path}']")
+    end
+
+    it "should have a link to the Short Stories page" do
+      expect(page).to have_xpath("//a[@href='#{short_stories_path}']")
+    end
+
+    it "should have a link to the Poems page" do 
+      expect(page).to have_xpath("//a[@href='#{poems_path}']")
+    end
+  end
   
   describe "HomePage" do 
     it "should show latest 10 published poems/stories" do
