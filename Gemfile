@@ -32,6 +32,7 @@ gem "database_cleaner", "~> 1.3.0"
 
 group :test, :development do 
   gem 'rspec-rails', '~> 3.1.0'
+  gem 'capybara', '~> 2.4.4'
 end
 
 # Use ActiveModel has_secure_password
