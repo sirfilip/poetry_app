@@ -1,10 +1,11 @@
 <% @publications.each do |publication| %>
+  <% present publication, PublicationPresenter do |p| %>
+    <%= p.title %>
+    <%= p.excerpt %>
 
-  <%= publication['title'] %>
-  <%= publication['excerpt'] %>
+    Published at: <%= p.published %>
+    Published as: <%= p.type %> 
+    Authored by: <%= p.author %>
 
-  Published at: <%= publication['published_at'] %>
-  Published as: <%= publication['type'] %> 
-  Authored by: <%= publication['author_name'] %>
-
+  <% end %>
 <% end %>
