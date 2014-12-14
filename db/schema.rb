@@ -11,14 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141214032412) do
+ActiveRecord::Schema.define(version: 20141214040205) do
 
   create_table "authors", force: true do |t|
     t.string   "name"
     t.text     "biography"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "authors", ["user_id"], name: "index_authors_on_user_id"
 
   create_table "publications", force: true do |t|
     t.string   "type"

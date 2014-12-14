@@ -5,6 +5,7 @@ FactoryGirl.define do
       "Author#{n}"
     end
     biography "Born in the usa"
+    user
   end
 
 
