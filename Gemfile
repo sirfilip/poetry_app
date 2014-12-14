@@ -30,6 +30,8 @@ gem "factory_girl_rails", "~> 4.0"
 
 gem "database_cleaner", "~> 1.3.0"
 
+gem "devise", "~> 3.4.1"
+
 group :test, :development do 
   gem 'rspec-rails', '~> 3.1.0'
   gem 'capybara', '~> 2.4.4'
