@@ -5,4 +5,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :author, :inverse_of => :user
+
+  def author_name
+    author.try(:name)
+  end
+
+  def author_bio
+    author.try(:biography)
+  end
 end

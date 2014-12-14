@@ -1,7 +1,7 @@
-<h2>Publications</h2>
+<h2>Short Stories</h2>
 
-<% @publications.each do |publication| %>
-  <% present publication, PublicationPresenter do |p| %>
+<% @short_stories.each do |short_story| %>
+  <% present short_story, PublicationPresenter do |p| %>
     <div class="publication">
       <h2><%= p.link_to_page %></h2>
       <p><em>Published on <%= p.published %>  by <%= p.author %> - <%= p.type %></em></p>
@@ -11,4 +11,4 @@
   <% end %>
 <% end %>
 
-<%= paginate @publications %>
+<%= paginate @short_stories %>

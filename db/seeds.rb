@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Tag.destroy_all
+
+["love", "life", "flowers", "clouds", "winter", "snow", "summer", "vacation", "sea", "wind", "sufring"].each do |t|
+  Tag.create(:name => t)
+end  

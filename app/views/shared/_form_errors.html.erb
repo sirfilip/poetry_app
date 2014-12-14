@@ -1,0 +1,8 @@
+<div id="error_explanation">
+  <h3><%= pluralize(record.errors.count, 'error') %> prevented saving this record</h3>
+  <ul>
+    <% record.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+</div>

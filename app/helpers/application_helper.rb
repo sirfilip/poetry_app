@@ -7,4 +7,10 @@ module ApplicationHelper
     presenter
   end
 
+  def errors_for(obj)
+    if obj.errors.any?
+      render :partial => 'shared/form_errors', :locals => {:record => obj}
+    end
+  end
+
 end

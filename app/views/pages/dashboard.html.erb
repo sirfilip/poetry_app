@@ -1,0 +1,37 @@
+<div class="row">
+  <h3>Author Info</h3> 
+
+  <% if current_user.author %>
+    <p>Name: <%= current_user.author_name %></p>
+    <p>Bio: <%= current_user.author_bio %></p>
+    <%= link_to 'Edit info', edit_author_path %>
+  <% else %>
+    <%= link_to 'Add info', new_author_path %>
+  <% end %>
+</div>
+
+<div class="row">
+  <h3>Poems</h3>
+
+  <% @poems.each do |poem| %>
+    <div class="poem">
+      <%= link_to poem.title, poem_path(poem) %>
+      <p>
+        <%= poem.metaphor %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+<div class="row">
+  <h3>Stories</h3>
+
+  <% @short_stories.each do |story| %>
+    <div class="story">
+      <%= link_to story.title, short_story_path(story) %>
+      <p>
+        <%= story.description %>
+      </p>
+    </div>
+  <% end %>
+</div>

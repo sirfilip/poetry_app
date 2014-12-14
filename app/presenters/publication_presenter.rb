@@ -14,7 +14,11 @@ class PublicationPresenter < BasePresenter
   end
 
   def excerpt
-    publication.description
+    if publication.type == 'Poem'
+      publication.metaphor
+    else
+      publication.description
+    end
   end
 
   def author
@@ -27,5 +31,9 @@ class PublicationPresenter < BasePresenter
 
   def type
     publication.type.downcase
+  end
+
+  def taglist
+    h.content_tag :p, "Tags: #{publication.tags.map {|t| t.name}.join(', ')}" if publication.tags.any?
   end
 end
