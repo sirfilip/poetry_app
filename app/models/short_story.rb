@@ -1,4 +1,4 @@
-class ShortStory < ActiveRecord::Base
+class ShortStory < Publication
   belongs_to :author, :inverse_of => :short_stories
 
   validate :must_have_author

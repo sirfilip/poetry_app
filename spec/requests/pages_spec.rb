@@ -56,7 +56,7 @@ describe "Pages" do
       end
 
       it "should show information about the publication type" do 
-        expect(page).to have_content(/Published as: .*poem/i)
+        expect(page).to have_content('poem')
       end
 
       it "should show the poems title" do 
@@ -68,7 +68,7 @@ describe "Pages" do
       end
 
       it "should show information about the author" do 
-        expect(page).to have_content(/Authored by: .*#{@poem.author.name}/i)
+        expect(page).to have_content(@poem.author.name)
       end
 
       it "should show the publication date" do 
@@ -84,7 +84,7 @@ describe "Pages" do
       end
 
       it "should show information about the publication type" do 
-        expect(page).to have_content(/Published as: .*Short Story/i)
+        expect(page).to have_content('shortstory')
       end
 
       it "should show the stories title" do 
@@ -96,7 +96,7 @@ describe "Pages" do
       end
 
       it "should show information about the author" do 
-        expect(page).to have_content(/Authored by: .*#{@story.author.name}/i)
+        expect(page).to have_content(@story.author.name)
       end
 
       it "should show the publication date" do 

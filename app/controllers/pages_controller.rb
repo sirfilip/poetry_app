@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def home
-    @publications = Publication.latest
+    @publications = Publication.eager_load(:author).latest
   end
 end
