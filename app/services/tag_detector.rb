@@ -9,7 +9,7 @@ class TagDetector
   end
 
   def detect(text)
-    words = text.downcase.split(' ').to_set
+    words = text.downcase.split(/\W/).to_set
     tags & words
   end
 
