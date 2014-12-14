@@ -1,28 +1,21 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to PoetryApp. Place to store and share your Poetry
 
-Things you may want to cover:
+Installation:
 
-* Ruby version
+* Make sure you have ruby 2.1.5 installed 
 
-* System dependencies
+* Clone this repo (paste this into terminal) git clone http://github.com/sirfilip/poetry_app
 
-* Configuration
+* bundle install
 
-* Database creation
+* bundle exec rake db:migrate
 
-* Database initialization
+* bundle exec rake db:seed
 
-* How to run the test suite
+* bundle exec rails server
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* enjoy
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
